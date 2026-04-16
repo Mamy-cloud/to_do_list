@@ -8,5 +8,7 @@ workflows:
         script: |
           flutter pub get
           flutter build apk --release
-    artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk
+          flutter build apk --release --split-per-abi
+        artifacts:
+          - build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+          
